@@ -9,12 +9,62 @@
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Album example for Bootstrap</title>
-
+    {% load static %}
     <!-- Bootstrap core CSS -->
+     <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <style>
+    *{
+      box-sizing: border-box;
+    }
+
+    body{
+      background-image: url('../../media/images/manhattan.jpg');
+      background-attachment: fixed;
+    }
+
+    .jumbotron{
+      background: transparent;
+      height: 540px;
+    }
+
+    .container{
+      transform: translateY(130px);
+      color: white;
+    }
+
+    .container h1{
+      font-size: 4rem;
+      color: grey;
+      font-family: cursive;
+      font-style: oblique
+    }
+
+    .container p{
+      font-style: oblique;
+      color: #eeedea !important;
+    }
+    .container p a{
+      border-color: grey;
+      color: #eeedea;
+    }
+
+   .album{
+      background: transparent !important;
+      margin-top: 35vh;
+      height: 100vh;
+    }
+
+    .album h1{
+      text-align: center;
+      font-family: cursive;
+      font-style: oblique;
+      color: black;
+    }
+
+    </style>
 
   </head>
 
@@ -40,15 +90,17 @@
       <section class="jumbotron text-center">
         <div class="container">
           <h1 class="jumbotron-heading">Hi, I'm Dan</h1>
-          <p class="lead text-muted">THis is my intor I love web development with python and javascript</p>
+          <p class="lead text-muted">I'm a Frontend Developer that loves JavaScript and Python!</p>
           <p>
-            <a href="mailto:d.epstein92@gmail.com" class="btn btn-primary my-2">Email Me</a>
-            <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+            <a href="mailto:d.epstein92@gmail.com" id="email-me" class="btn btn-outline-secondary">Email Me</a>
+            <a href="#" id="social-media" class="btn btn-outline-secondary">Secondary action</a>
           </p>
         </div>
       </section>
 
+
       <div class="album py-5 bg-light">
+        <h1>Recent Projects</h1>
         <div class="container">
 
           <div class="row">
@@ -72,11 +124,54 @@
 
     </main>
 
-    <footer class="text-muted">
-      <div class="container text-center">
-        <p>&#x24B8; Dan Epstein {% now "Y" %}</p>
-      </div>
-    </footer>
+<!-- Footer -->
+<footer class="page-footer font-small special-color-dark pt-4">
+
+    <!-- Footer Elements -->
+    <div class="container">
+
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fab fa-facebook-f"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fab fa-twitter"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-gplus mx-1">
+            <i class="fab fa-google-plus-g"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-li mx-1">
+            <i class="fab fa-linkedin-in"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-dribbble mx-1">
+            <i class="fab fa-dribbble"> </i>
+          </a>
+        </li>
+      </ul>
+      <!-- Social buttons -->
+
+    </div>
+    <!-- Footer Elements -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="https://mdbootstrap.com/education/bootstrap/">Dan Epstein</a>
+    </div>
+    <!-- Copyright -->
+
+  </footer>
+  <!-- Footer -->
+  <!-- Footer -->
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -84,5 +179,13 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/scrollmagic/uncompressed/ScrollMagic.js"></script>
+<!--- <script src="js/scrollmagic/minified/ScrollMagic.min.js"></script> -->
+
+<script src="bower_components/aos/dist/aos.js"></script>
+
+<script>
+  AOS.init();
+</script>
   </body>
 </html>
