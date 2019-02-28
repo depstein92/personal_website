@@ -13,7 +13,8 @@
     <!-- Bootstrap core CSS -->
      <link rel="stylesheet" href="bower_components/aos/dist/aos.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/fontawesome.css" integrity="sha384-4aon80D8rXCGx9ayDt85LbyUHeMWd3UiBaWliBlJ53yzm9hqN21A+o1pqoyK04h+" crossorigin="anonymous">
     <!-- Custom styles for this template -->
     <style>
     *{
@@ -26,25 +27,25 @@
     }
 
     .jumbotron{
-      background: transparent;
-      height: 540px;
+      background: darkgray;
+      height: 478px;
     }
 
     .container{
-      transform: translateY(130px);
+      transform: translateY(80px);
       color: white;
     }
 
     .container h1{
-      font-size: 4rem;
-      color: grey;
+      font-size: 7rem;
+      color: white;
       font-family: cursive;
       font-style: oblique
     }
 
     .container p{
       font-style: oblique;
-      color: #eeedea !important;
+      color: grey !important;
     }
     .container p a{
       border-color: grey;
@@ -53,19 +54,33 @@
 
    .album{
       background: transparent !important;
-      margin-top: 35vh;
-      height: 100vh;
+      margin-top: 25vh;
+      height: 5vh;
     }
 
     .album h1{
       text-align: center;
       font-family: cursive;
+      font-size: 4rem;
       font-style: oblique;
       color: black;
     }
 
-    </style>
+    #blogs-container{
+      transform: none;
+      margin-top: 80vh;
+    }
 
+    #blogs-container h1{
+      font-size: 4rem;
+      text-align: center;
+      color: black;
+      margin-bottom: 35px;
+    }
+
+
+
+    </style>
   </head>
 
   <body>
@@ -93,7 +108,9 @@
           <p class="lead text-muted">I'm a Frontend Developer that loves JavaScript and Python!</p>
           <p>
             <a href="mailto:d.epstein92@gmail.com" id="email-me" class="btn btn-outline-secondary">Email Me</a>
-            <a href="#" id="social-media" class="btn btn-outline-secondary">Secondary action</a>
+            <a href="#" id="social-media" class="btn btn-outline-secondary">
+              <i class="fab fa-github" style="margin-right: 10px"></i>Github
+            </a>
           </p>
         </div>
       </section>
@@ -102,7 +119,6 @@
       <div class="album py-5 bg-light">
         <h1>Recent Projects</h1>
         <div class="container">
-
           <div class="row">
             {% for job in jobs.all %}
             <div class="col-md-4">
@@ -111,18 +127,35 @@
                 <div class="card-body">
                   <p class="card-text">{{ job.summary }} </p>
                   <div class="d-flex justify-content-between align-items-center">
-                    <div class="btn-group">
                       <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                    </div>
                     <small class="text-muted">9 mins</small>
                   </div>
                 </div>
               </div>
             </div>
           {% endfor %}
-
     </main>
+
+<div class="container" id="blogs-container">
+  <h1>Algorithms</h1>
+  <div class="row">
+  {% for blog in blogs.all %}
+    <div class="col-sm">
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{ blog.image.url }}" height=200 width=200 />
+        <div class="card-body">
+          <h7 class="card-title" style="color: black">{{ blog.title }}</h7>
+          <h7>{{ blog.pub_date}}</h7>
+          <p class="card-text">{{ blog.summary }}</p>
+          <a href="#" class="btn btn-primary">
+            <i class="fab fa-github" style="margin-right: 10px"></i>See Github link
+          </a>
+        </div>
+      </div>
+    </div>
+      {% endfor %}
+  </div>
+</div>
 
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
