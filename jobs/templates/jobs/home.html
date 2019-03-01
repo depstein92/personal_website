@@ -52,6 +52,10 @@
       color: #eeedea;
     }
 
+    .container img:hover{
+      cursor: pointer;
+    }
+
    .album{
       background: transparent !important;
       margin-top: 25vh;
@@ -77,6 +81,40 @@
       color: black;
       margin-bottom: 35px;
     }
+
+    #about-me{
+      margin-top: 50vh;
+      height: 100vh;
+    }
+
+    #about-me img{
+      width: 200px;
+      height: 250px;
+      border-radius: 20px;
+    }
+
+    #about-me #me-presented{
+      width: 50%;
+    }
+
+    #about-me #me-presented{
+      width: 40%;
+      text-align: center;
+      text-decoration: unset;
+      margin: 70px auto;
+    }
+    #about-me h1{
+      text-align: center;
+      font-family: cursive;
+      font-style: oblique;
+    }
+
+    #about-me p{
+      font-family: cursive;
+      font-style: oblique;
+      font-size: 1.2rem;
+    }
+
 
 
 
@@ -157,6 +195,80 @@
   </div>
 </div>
 
+<div class="jumbotron" id="about-me">
+  <h1 class="display-4">About Me</h1>
+  <div id="me-presented">
+    <div class="">
+      <img src="../../media/images/me.png" alt="picture of me" />
+      <p>Dan Epstein</p>
+    </div>
+
+      <p><em>
+        Enthusiastic front end web developer with a passion for designing clean, simple, focused, and elegant code. With experience in
+         Javascript, Python, React, Redux, Typescript, Webpack, SCSS, Flask, Django, SQL and a background in C++ and Java, I discovered
+         web development through my colleagues at NYCDA.
+      </em></p>
+  </div>
+  <hr class="my-4">
+  <div class="education-container">
+    <div class="category-title">
+      <p class="category-title--education"> </p>
+      <p class="category-title--experience"> </p>
+    </div>
+    <div class="float--left">
+      <div class="list-group">
+      <a href="#" class="list-group-item list-group-item-action active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small>Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+          <small class="text-muted">3 days ago</small>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+      <a href="#" class="list-group-item list-group-item-action">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">List group item heading</h5>
+        </div>
+        <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+        <small class="text-muted">Donec id elit non mi porta.</small>
+      </a>
+    </div>
+    </div>
+    <div class="float--right">
+      <div class="list-group">
+         <a href="#" class="list-group-item list-group-item-action active">
+           <div class="d-flex w-100 justify-content-between">
+             <h5 class="mb-1">List group item heading</h5>
+           </div>
+           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+           <small>Donec id elit non mi porta.</small>
+         </a>
+         <a href="#" class="list-group-item list-group-item-action">
+           <div class="d-flex w-100 justify-content-between">
+             <h5 class="mb-1">List group item heading</h5>
+             <small class="text-muted">3 days ago</small>
+           </div>
+           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+           <small class="text-muted">Donec id elit non mi porta.</small>
+         </a>
+         <a href="#" class="list-group-item list-group-item-action">
+           <div class="d-flex w-100 justify-content-between">
+             <h5 class="mb-1">List group item heading</h5>
+           </div>
+           <p class="mb-1">Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.</p>
+           <small class="text-muted">Donec id elit non mi porta.</small>
+         </a>
+       </div>
+    </div>
+  </div>
+</div>
 <!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
 

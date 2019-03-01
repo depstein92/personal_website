@@ -19,3 +19,15 @@ class Blog(models.Model):
 
       def __str__(self): # for django admin
            return self.title
+
+class Education(models.Model):
+    school = models.CharField(max_length=75)
+    degree = models.CharField(max_length=150)
+    years_attended = models.CharField(max_length=30)
+    description = models.TextField()
+
+class Experience(models.Model):
+    company_name = models.CharField(max_length=75)
+    position = models.CharField(max_length=30)
+    date = models.CharField(max_length=50)
+    description = models.TextField()
