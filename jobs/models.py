@@ -3,13 +3,15 @@ from django.db import models
 class Job(models.Model):
     image = models.ImageField(upload_to="")
     summary = models.CharField(max_length=200)
-
+    url = models.CharField(max_length=300)
 
 class Blog(models.Model):
       title = models.CharField(max_length=255)
       date = models.DateField()
       body = models.TextField(max_length=120)
       image = models.ImageField(upload_to="images/")
+      url = models.CharField(max_length=300)
+
 
       def summary(self):
           return  self.body[:100]
@@ -19,6 +21,7 @@ class Blog(models.Model):
 
       def __str__(self): # for django admin
            return self.title
+
 
 class Education(models.Model):
     school = models.CharField(max_length=75)
